@@ -13,6 +13,6 @@ spring:
 
 info:
   app:
-    name: ${spring.application.name}
+    name: serie-service
     version: 1.0.0
     description: Serie service for microservice final exam, Rosario Zamudio
