@@ -1,0 +1,24 @@
+server:
+  port: 8084
+
+spring:
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka
+   data:
+    mongodb:
+      authentication-database: admin
+      username: rootuser
+      password: rootpass
+      database: catalog_db
+      port: 27017
+      host: mongodb
+  zipkin:
+    base-url: http://localhost:9411/
+      
+info:
+  app:
+    name: catalog-service
+    description: Catalog service for microservice final exam, Rosario Zamudio
+    version: 1.0.0      
