@@ -1,0 +1,40 @@
+server:
+  port: 8082
+
+spring:
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql:3306/movie_db
+    username: user
+    password: pass
+  sql:
+    init:
+      data-locations: classpath:movie-service.sql
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+  rabbitmq:
+    username: guest
+    password: guest
+    host: rabbitmq
+    port: 5672
+      
+      
+
+queue:
+  movie:
+    name: Movie
+zipkin:
+  base-url: http://localhost:9411/
+
+  
+info:
+  app:
+    name: movie-service
+    description: Movie service for microservice final exam, Rosario Zamudio
+    version: 1.0.0   
